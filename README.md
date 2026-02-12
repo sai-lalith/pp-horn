@@ -1,11 +1,13 @@
 ## Repo to track private hornsat work
 
 For now the structure is defined as below:
+
 .
 └── plain-text 
     └── cfg
 
-Where we plan to first get all the viable solvers as defined by [1]. Inital 
+Our first plan would be to get all the viable solvers as defined by [1]. 
+Then one of these solvers or a custom solver would be used to apply to target a subset of datalog or program verification tasks like Pedresen's pointer analysis. This would the future direction.
 
 Bucket list:
 - [ ] Control flow grammer based algorithm O(N^2)
