@@ -8,7 +8,10 @@ Bucket list:
 - [X] Code clean up and better structure
 - [ ] Graph based algorithm forward search O(N)
 - [ ] Graph based algorithm with backward search O(N) but better for unsat instances
-- [ ] Resolution based algorithm. Preferred as this method is shown tractable in MPC setting by [2]
+- [ ] Migration from maps
+- [ ] DIMACS parser
+- [ ] Test cases for both DIMACS and library style
+- [ ] Experimental method with aggressive in/pre-processing to gear up for MPC.
 
 References:
 

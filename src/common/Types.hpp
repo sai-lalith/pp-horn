@@ -1,16 +1,16 @@
 #pragma once
+#include <cstdint>
 #include <vector>
-#include <unordered_map>
 
-struct Literal {
-	bool sign;
-	char letter;
-};
+namespace Horn {
+	using VarID = uint32_t;
 
-using Clause = std::vector<Literal>;
+	struct Literal {
+		bool is_positive;
+		VarID var;
+	};
 
-using HornFormula = std::vector<Clause>;
-
-using Assignment = std::unordered_map<char, bool>;
-
-
+	using Clause = std::vector<Literal>;
+	using HornFormula = std::vector<Clause>;
+	using Assignment = std::vector<bool>;
+}
