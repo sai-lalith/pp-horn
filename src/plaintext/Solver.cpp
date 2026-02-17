@@ -61,26 +61,12 @@ void print_result(bool satisfiable, const Assignment& assignments) {
 	}
 }
 
-int main() {
-	// considerations:
-	// we assume everything is in reduced format, meaning it's preprocessed already
+void algorithm1(HornFormula S, Assignment assignments) {
 
 	bool consistent {true};
 	bool change {true};
 
-	Assignment assignments = {
-		{'a', false}, 
-		{'b', false},
-		{'c', false}
-	};
 
-	HornFormula S = {
-		{{false, 'a'}, {false, 'b'}},
-		{{false, 'b'}},
-		{{false, 'c'}},
-		{{true, 'a'}}
-	}; // TODO: either CIN or fstream for more test cases, dimacs parser might be good
-	
 	while(change && consistent) {
 		change = false;
 
@@ -103,5 +89,24 @@ int main() {
 		}
 	}
 	print_result(consistent, assignments);
+}
+
+int main() {
+	// considerations:
+	// we assume everything is in reduced format, meaning it's preprocessed already
+	Assignment assignments = {
+		{'a', false}, 
+		{'b', false},
+		{'c', false}
+	};
+
+	HornFormula S = {
+		{{false, 'a'}, {false, 'b'}},
+		{{false, 'b'}},
+		{{false, 'c'}},
+		{{true, 'a'}},
+	}; // TODO: either CIN or fstream for more test cases, dimacs parser might be good
+	
+	algorithm1(S, assignments);
 	return 0;
 }
