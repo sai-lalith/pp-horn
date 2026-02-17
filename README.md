@@ -1,17 +1,11 @@
 ## Repo to track private hornsat work
 
-For now the structure is defined as below:
-
-.
-└── plain-text 
-    └── cfg
-
 Our first plan would be to get all the viable solvers as defined by [1]. 
 Then one of these solvers or a custom solver would be used to apply to target a subset of datalog or program verification tasks like Pedresen's pointer analysis. This would the future direction.
 
 Bucket list:
 - [X] Control flow grammer based algorithm O(N^2)
-- [ ] Code clean up and better structure
+- [X] Code clean up and better structure
 - [ ] Graph based algorithm forward search O(N)
 - [ ] Graph based algorithm with backward search O(N) but better for unsat instances
 - [ ] Resolution based algorithm. Preferred as this method is shown tractable in MPC setting by [2]
